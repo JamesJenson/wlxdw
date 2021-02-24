@@ -6,13 +6,12 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class RequestInterceptor implements HandlerInterceptor {
+public class RequestInterceptorExample implements HandlerInterceptor {
     long start = System.currentTimeMillis();
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         start = System.currentTimeMillis();
-        System.out.println("RequestInterceptor cost="+(System.currentTimeMillis()-start));
         return true;
     }
 

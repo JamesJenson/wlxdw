@@ -8,8 +8,8 @@ import javax.servlet.FilterConfig;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = "/*", filterName = "RequestFilter")
-public class RequestFilter implements Filter {
+//@WebFilter(urlPatterns = "/*", filterName = "RequestFilter")
+public class RequestFilterExample implements Filter {
 
 
     @Override

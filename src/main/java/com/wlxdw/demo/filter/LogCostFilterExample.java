@@ -9,8 +9,9 @@ import java.io.IOException;
 
 // 该注解的优先级按照过滤器名称排序，且都高于FilterRegistrationBean中配置的过滤器
 // 须在启动类上添加扫描注解
-@WebFilter(urlPatterns = "/*", filterName = "LogCostFilter")
-public class LogCostFilter implements Filter {
+// @Order注解并不能解决过滤器排序问题
+//@WebFilter(urlPatterns = "/*", filterName = "LogCostFilter")
+public class LogCostFilterExample implements Filter {
 
 
     @Override
