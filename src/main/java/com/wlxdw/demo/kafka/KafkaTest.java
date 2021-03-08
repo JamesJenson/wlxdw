@@ -6,4 +6,5 @@ package com.wlxdw.demo.kafka;
  * @description: kafka测试研究
  */
 public class KafkaTest {
+    private String name;
 }
