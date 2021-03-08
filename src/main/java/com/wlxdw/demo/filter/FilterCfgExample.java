@@ -2,6 +2,11 @@ package com.wlxdw.demo.filter;
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 
+/**
+ * @auther: yuzx
+ * @date: 2021/2/24 11:04
+ * @description: 过滤器配置bean生成
+ */
 //@Configuration
 public class FilterCfgExample {
 

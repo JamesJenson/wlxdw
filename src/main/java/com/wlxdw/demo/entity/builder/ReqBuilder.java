@@ -1,5 +1,10 @@
 package com.wlxdw.demo.entity.builder;
 
+/**
+ * @auther: yuzx
+ * @date: 2021/2/24 11:04
+ * @description: 入参建造者
+ */
 public class ReqBuilder<T> {
 
     private Req req;

@@ -1,5 +1,10 @@
 package com.wlxdw.demo.entity.builder;
 
+/**
+ * @auther: yuzx
+ * @date: 2021/2/24 11:04
+ * @description: 出参建造者
+ */
 public class RspBuilder<T> {
 
     private Rsp rsp;

@@ -5,7 +5,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+/**
+ * @auther: yuzx
+ * @date: 2021/2/24 11:04
+ * @description: 拦截器实现用例
+ */
 public class RequestInterceptorExample implements HandlerInterceptor {
     long start = System.currentTimeMillis();
 

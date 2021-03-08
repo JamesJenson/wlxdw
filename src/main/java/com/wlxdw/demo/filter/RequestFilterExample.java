@@ -7,6 +7,11 @@ import javax.servlet.*;
 import javax.servlet.FilterConfig;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
+/**
+ * @auther: yuzx
+ * @date: 2021/2/24 11:04
+ * @description: 过滤器注解生成
+ */
 
 //@WebFilter(urlPatterns = "/*", filterName = "RequestFilter")
 public class RequestFilterExample implements Filter {

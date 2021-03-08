@@ -7,6 +7,11 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
+/**
+ * @auther: yuzx
+ * @date: 2021/2/24 11:04
+ * @description: 过滤器注解生成
+ */
 // 该注解的优先级按照过滤器名称排序，且都高于FilterRegistrationBean中配置的过滤器
 // 须在启动类上添加扫描注解
 // @Order注解并不能解决过滤器排序问题
