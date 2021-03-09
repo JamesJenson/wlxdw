@@ -1,11 +1,18 @@
 package com.wlxdw.demo.kafka;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.CommonClientConfigs;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.config.SaslConfigs;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Properties;
 import java.util.UUID;
@@ -17,9 +24,15 @@ import java.util.concurrent.Future;
  * @date: 2021/3/8 11:04
  * @description: kafka测试研究
  */
+@RestController
+@Slf4j
+@RequestMapping("/wlxdw/kafka")
+@Api(value = "kafka测试接口", tags = {"kafka测试接口"})
 public class KafkaTest {
 
-    public static void main(String[] args) {
+    @PostMapping("/test")
+    @ApiOperation(value = "测试接口",notes = "测试接口")
+    public void sendKafka(@PathVariable(value = "message") String message) {
         Properties props = new Properties();
         //公网接入域名地址,即公网路由地址
         props.put("bootstrap.servers", "10.161.163.24:9092");
