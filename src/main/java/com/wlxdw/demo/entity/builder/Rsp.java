@@ -45,15 +45,15 @@ public class Rsp<T> implements Serializable {
     }
 
     public static <T> Rsp<T> success(String requestId){
-        return new Rsp<>(requestId, DateUtil.format(new Date()), RspValueEnum.SUCCESS.getCode(), RspValueEnum.SUCCESS.getMsg(), null);
+        return new Rsp(requestId, DateUtil.format(new Date()), RspValueEnum.SUCCESS.getCode(), RspValueEnum.SUCCESS.getMsg(), null);
     }
 
     public static <T> Rsp<T> error(String requestId){
-        return new Rsp<>(requestId, DateUtil.format(new Date()), RspValueEnum.FAIL.getCode(), RspValueEnum.FAIL.getMsg(), null);
+        return new Rsp(requestId, DateUtil.format(new Date()), RspValueEnum.FAIL.getCode(), RspValueEnum.FAIL.getMsg(), null);
     }
 
     public static <T> Rsp<T> error(String requestId, RspValueEnum rspValueEnum){
-        return new Rsp<>(requestId, DateUtil.format(new Date()), rspValueEnum.getCode(), rspValueEnum.getMsg(), null);
+        return new Rsp(requestId, DateUtil.format(new Date()), rspValueEnum.getCode(), rspValueEnum.getMsg(), null);
     }
 
 }

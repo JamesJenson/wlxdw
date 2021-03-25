@@ -32,7 +32,7 @@ public class KafkaTest {
     public void sendKafka(@RequestParam(value = "message") String message) {
         Properties props = new Properties();
         //公网接入域名地址,即公网路由地址
-        props.put("bootstrap.servers", "10.161.163.24:9092");
+        props.put("bootstrap.servers", "localhost:9092");
         props.put("acks", "all");
         props.put("retries",0);
         props.put("batch.size", 16384);
@@ -47,7 +47,7 @@ public class KafkaTest {
                 "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"ckafka-jyyex2zm#smartsyn\" password=\"Smart_syn\";");
         Producer<String, String> producer = new KafkaProducer<String, String>(props);
         for (int i = 0; i < 100; i++) {
-            Future<RecordMetadata> future = producer.send(new ProducerRecord<>("policySyn", UUID.randomUUID().toString()));
+            Future<RecordMetadata> future = producer.send(new ProducerRecord<String, String>("policySyn", UUID.randomUUID().toString()));
             try {
                 System.out.println("produce offset:" + future.get().offset());
             } catch (InterruptedException e) {
